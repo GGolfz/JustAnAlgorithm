@@ -1,0 +1,1 @@
+You are given the sorted array. Write the program to find the first index of the value in that array.
