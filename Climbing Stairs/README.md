@@ -1,0 +1,1 @@
+You want to go to an upper floor by using a stair and then you curious that how many ways you can step on the stairs. You can walk for one or two step at a time. Write the program to calculate it by using Recursion only (no loop).
