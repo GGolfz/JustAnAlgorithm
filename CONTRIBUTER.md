@@ -2,3 +2,5 @@
 
 | Name   |   Algorithm |
 |------------ | -------------|
+|Tonkla41|Sudoku|
+|Tonkla41|Word Puzzle|
