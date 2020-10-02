@@ -1,4 +1,4 @@
-package sudoku;
+package Sudoku;
 import java.util.Arrays;
 public class sudoku {
     public static void main(String[] args) {
