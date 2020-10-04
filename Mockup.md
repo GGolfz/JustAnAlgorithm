@@ -401,6 +401,7 @@ Maximum Value = 15 (Steal 2 and 4)
 
 ## 26.Find the shortest distance of traveling to every node and go back to the starting node but you cannot travel to the same node except the start and end node from the given undirected graph. 
 <img src="https://github.com/GGolfz/JustAnAlgorithm/blob/master/images/tsp.png">
+
 | Directions | Distance |
 |------------|----------|
 |1 > 2 > 3 > 4 > 1|14|
