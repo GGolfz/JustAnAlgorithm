@@ -28,8 +28,8 @@ Since each node need to connected to all other node so first node will connect t
 
 ## 3.What is a tree and a binary search tree?
 Ans :  <br/>
-Tree is acyclic graph that has the edge is vertex - 1 <br/>
-Binary Search Tree is the tree that the value of parent more than any node of left sub tree and less than and equal any node of right sub tree.
+Tree is connected acyclic graph that has the edge is vertex - 1 <br/>
+Binary Search Tree is the tree that the value of parent is more than every node of left sub tree and less than or equal any node of right sub tree.
 
 ## 4.Write the pseudo code of selection sort and what is the basic operation of this algorithm. Also identify the Big-O, Big-Theta, Big-Omega.
 
