@@ -208,6 +208,13 @@ for(int i=1;i<=n;i++){
 <img src="https://render.githubusercontent.com/render/math?math=f(n) = (n*(n %2B 1)*(2n %2B 1))/6"> <br/>
 <img src="https://render.githubusercontent.com/render/math?math=f(n) = O(n^3)"> <br/>
 
+## 17.Is the following statement is true?
+
+### 1.Convex set is a set of points that any two points P,Q of set belong to the convex set.
+Ans : False, It must be set of line PQ
+### 2.Convex hull is the smallest convex.
+Ans : True
+
 ## 18.What scenario makes the quick sort to be the worst case
 Ans : The Pivot is the smallest or largest number so the partition will not divide into two part and the big O will become n^2
 
