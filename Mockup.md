@@ -363,8 +363,8 @@ Find 87*37  = (8*3) * 10^2 + [(8+7)*(3+7) - (8*3) - (7*7)] * 10 + (7*7)
 
 ## 25. You are going to steal the gems in the jewelry shop. There are 5 gems in this store and each store has the value and weight which is (3,4), (5,3), (3,2), (10,7), (2,1) (weight is in kilograms unit). But your bag can contain at most 10 kilograms. What gems will you steal that you will get the most value.
 
-| Steal | Weight | Value | Possible |
-|-------|--------|-------|----------|
+| Steal | Value | Weight | Possible |
+|-------|-------|--------|----------|
 |1|3|4|Y|
 |2|5|3|Y|
 |3|2|7|Y|
