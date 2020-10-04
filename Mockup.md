@@ -67,7 +67,13 @@ gcd(46, 18) = gcd(18, 46 % 18)
             = gcd(2, 0)
             = 2
 ```
-Big-O : ??
+Big-O :
+
+```
+log(max(a,b)) = log(n)
+```
+
+
 
 ## 6.What are three operations of dictionaries? 
 
@@ -111,6 +117,62 @@ Then <img src="https://render.githubusercontent.com/render/math?math=\Omega(n^2)
 
 Since Big-O equals Big-Omega (<img src="https://render.githubusercontent.com/render/math?math=O(n^2)=\Omega(n^2)">) Then Big-Theta = <img src="https://render.githubusercontent.com/render/math?math=\Theta(n^2)">
 
+## 10.Find Big-O of the following code.For example, The main method will call solve({3,5,3,10,2},{4,3,2,7,1},10,4)
+
+```
+T(n)	= T(n-1)+T(n-1)+1
+			= 2T(n-1)+1
+			= 2*(2T(n-2)+1)+1 = 2^2*T(n-2)+2+1
+			= 2^2*(2T(n-3)+1)+2+1 = 2^3*T(n-3)+4+2+1
+			...
+			= 2^(n-1)*T(n-(n-1))+(2^0+2^1+2^2+...+2^n-2)
+			= 2^(n-1)*T(1)+(((2^n-2)*2-1)/2-1)
+			= 2^(n-1)*1+(2^(n-1)-1)
+			= (2^n)-1
+```
+
+## 11.f(n) = log1+log2+log3+...+logn. Prove that f(n) is a member of O(nlogn).
+
+```
+f(n) 	= log1+log2+log3+...+logn
+			= log(1*2*3*4*...*n)
+			= log(n!)
+log(n!) <= log(n^n)
+f(n) <= log(n^n)
+f(n) <= nlogn
+so, f(n) is a member of O(nlogn)
+```
+
+## 12.Write the pseudo code of merge sort.
+
+```
+mergeSort(A[0...n],L,R){
+	int mid = (L+R)/2;
+	if(L >= R) return; //we can stop when there is only one element in array
+	mergeSort(A,L,mid);
+	mergeSort(A,mid+1,R);
+	combine(A,L,mid,R);
+}
+combine(A,left,mid,right){
+	L = [],R = [];
+	int n1 = mid-left+1;
+	//copy array to left array
+	for(int k=0;k<n1;k++) L.push(A[i+left])
+	int n2 = right-mid;
+	//copy array ti right array
+	for(int k=0;k<n2;k++) R.push(A[mid+i+1]);
+	int i = 0,j = 0,k = l;
+	while(i < n1 && j < n2){
+		if(L[i] <= R[j]) arr[k++] = L[i++]
+		else arr[k++] = R[j++]
+	}
+	while(i < n1) arr[k++] = L[i++]
+	while(j < n2) arr[k++] = R[j++]
+}
+```
+
+
+
 ## 13.You are given the sorted array with size of 1000, if you want to determine that the value X is in this array or not by using binary search. What is the number of times you have to compare the value?
 
 Ans : ` ⌈log (1001) base 2⌉ = 10`
@@ -149,7 +211,7 @@ M(n)    = M(n-1) + 1 + M(n-1)
         = 2^(n-1) + 2^(n-1) - 1
         = 2*(2^n-1) - 1
         = 2^n - 1
-```        
+```
 ## 23.Find 3156 * 2512 by using multiplication of large number algorithms
 ```
 3156 * 2512 = (31*25) * 10^4 + [(31+56) * (25+12) - (31*25) - (56*12) ] * 10^2 + (56*12) 
