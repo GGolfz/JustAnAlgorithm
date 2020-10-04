@@ -1,5 +1,5 @@
 ## 1.Draw the adjacency matrix and adjacency list from the given undirected graph
-
+<img src="https://github.com/GGolfz/JustAnAlgorithm/blob/master/images/graph.png">
 V = [1,2,3,4,5,6]
 
 ### Adjacency Matrix
@@ -119,6 +119,7 @@ Since Big-O equals Big-Omega (<img src="https://render.githubusercontent.com/ren
 
 ## 10.Find Big-O of the following code.For example, The main method will call solve({3,5,3,10,2},{4,3,2,7,1},10,4)
 
+<img src="https://github.com/GGolfz/JustAnAlgorithm/blob/master/images/code.png">
 ```
 T(n)	= T(n-1)+T(n-1)+1
 			= 2T(n-1)+1
@@ -194,6 +195,27 @@ Ans :
 From Master Theorem a = 4 b = 2 d = 5
 4 < 2^5 => T(n) is <img src="https://render.githubusercontent.com/render/math?math=\Theta(n^d)"> => <img src="https://render.githubusercontent.com/render/math?math=\Theta(n^5)">
 
+## 16.find Big-O of the following code.
+```
+int ans = 0;
+for(int i=1;i<=n;i++){
+	for(int j=1;j<=i*i;j++){
+		ans+=j;
+    }
+}
+```
+<img src="https://render.githubusercontent.com/render/math?math=f(n) = \sum_{i=1}^{n} \sum_{j=1}^{i*i} 1"> <br/>
+<img src="https://render.githubusercontent.com/render/math?math=f(n) = 1^2 %2B 2^2 %2B 3^2 %2B ... %2B n^2"> <br/>
+<img src="https://render.githubusercontent.com/render/math?math=f(n) = (n*(n %2B 1)*(2n %2B 1))/6"> <br/>
+<img src="https://render.githubusercontent.com/render/math?math=f(n) = O(n^3)"> <br/>
+
+## 17.Is the following statement is true?
+
+### 1.Convex set is a set of points that any two points P,Q of set belong to the convex set.
+Ans : False, It must be set of line PQ
+### 2.Convex hull is the smallest convex.
+Ans : True
+
 ## 18.What scenario makes the quick sort to be the worst case
 Ans : The Pivot is the smallest or largest number so the partition will not divide into two part and the big O will become n^2
 
@@ -217,7 +239,71 @@ M(n)    = M(n-1) + 1 + M(n-1)
         = 2*(2^n-1) - 1
         = 2^n - 1
 ```
+## 22.Write the pseudo code to find the convex hull from the set of N points.
+
+```java
+import java.util.Scanner;
+
+public class ConvexHull{
+    public static void main(String[]args){
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        Point[] points = new Point[n];
+        for(int i=0;i<n;i++){
+            int x = sc.nextInt();
+            int y = sc.nextInt();
+            Point p = new Point(x,y);
+            points[i] = p;
+        }
+        for(int i=0;i<n;i++){
+            for(int j=i+1;j<n;j++){
+                int left=0, right = 0;
+                Point p1 = points[i];
+                Point p2 = points[j];
+                for(int k=0;k<n;k++){
+                    if(k == i || k == j) continue;
+                    Point p3 = points[k];
+                    float a = p2.y-p1.y;
+                    float b = p1.x-p2.x;
+                    float c = p1.x*p2.y-p2.x*p1.y;
+                    if(p3.x*a+p3.y*b <= c){
+                        left++;
+                    }
+                    if(p3.x*a+p3.y*b > c){
+                        right++;
+                    }
+                }
+                if(left*right == 0){
+                    System.out.println("("+p1.x+","+p1.y+"), ("+p2.x+","+p2.y+")");
+                }
+            }
+        }
+    }
+}
+class Point{
+    int x,y;
+    Point(int x,int y){
+        this.x = x;
+        this.y = y;
+    }
+}
+/*
+8
+0 30
+15 25
+20 0
+30 60
+70 30
+55 20
+50 10
+50 40
+*/
+```
+
+
+
 ## 23.Find 3156 * 2512 by using multiplication of large number algorithms
+
 ```
 3156 * 2512 = (31*25) * 10^4 + [(31+56) * (25+12) - (31*25) - (56*12) ] * 10^2 + (56*12) 
             = (31*25) * 10^4 + [(87 * 37) - (31*25) - (56 * 12)] * 10^2 + (56*12)
@@ -268,7 +354,7 @@ Find 87*37  = (8*3) * 10^2 + [(8+7)*(3+7) - (8*3) - (7*7)] * 10 + (7*7)
 ```
 
 ## 24. Find the convex hull by using the quick hull algorithm from the given point. (Draw the picture) 
-<img src="https://github.com/GGolfz/JustAnAlgorithm/images/convex-hull.jpeg">
+<img src="https://github.com/GGolfz/JustAnAlgorithm/blob/master/images/convex-hull.jpeg">
 
 ## 25. You are going to steal the gems in the jewelry shop. There are 5 gems in this store and each store has the value and weight which is (3,4), (5,3), (3,2), (10,7), (2,1) (weight is in kilograms unit). But your bag can contain at most 10 kilograms. What gems will you steal that you will get the most value.
 
@@ -309,6 +395,7 @@ Find 87*37  = (8*3) * 10^2 + [(8+7)*(3+7) - (8*3) - (7*7)] * 10 + (7*7)
 Maximum Value = 15 (Steal 2 and 4)
 
 ## 26.Find the shortest distance of traveling to every node and go back to the starting node but you cannot travel to the same node except the start and end node from the given undirected graph. 
+<img src="https://github.com/GGolfz/JustAnAlgorithm/blob/master/images/tsp.png">
 | Directions | Distance |
 |------------|----------|
 |1 > 2 > 3 > 4 > 1|14|
