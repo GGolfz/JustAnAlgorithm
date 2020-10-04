@@ -197,6 +197,11 @@ From Master Theorem a = 4 b = 2 d = 5
 ## 18.What scenario makes the quick sort to be the worst case
 Ans : The Pivot is the smallest or largest number so the partition will not divide into two part and the big O will become n^2
 
+## 19.What is convex and convex hull?
+Ans : <br/>
+Convex : A set of points (finite or infinite) in the plane is called convex if for any two points P and Q in the set, the entire line segment with the end points at P and Q belongs to the set. (Curving out)<br/>
+Convex Hull : A set of n points in the plane which is the smallest convex polygon that contains all of point inside or on boundary.<br/>
+
 ## 20.Define the recurrence of the smallest number of times to move n dishes to complete the tower of hanoi problem
 ```
 M(1)    = 1
