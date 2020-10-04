@@ -239,6 +239,8 @@ M(n)    = M(n-1) + 1 + M(n-1)
         = 2*(2^n-1) - 1
         = 2^n - 1
 ```
+## 21.Explain why the number of points in the box with size of d*2d in the closest pair algorithm will not exceed 8.
+
 ## 22.Write the pseudo code to find the convex hull from the set of N points.
 
 ```java
