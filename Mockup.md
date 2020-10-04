@@ -50,7 +50,7 @@ return A
 
 The basic operation is compare the element to find minimum value <br/>
 
-f(n) = <img src="https://render.githubusercontent.com/render/math?math=\sum_{i=0}^{n-2} \sum_{j=i+1}^{n-1} 1"> <br/>
+f(n) = <img src="https://render.githubusercontent.com/render/math?math=\sum_{i=0}^{n-2} \sum_{j=i %B20 1}^{n-1} 1"> <br/>
 Big-O = <img src="https://render.githubusercontent.com/render/math?math=O(n^2)"> <br/>
 Big-Omega = <img src="https://render.githubusercontent.com/render/math?math=\Omega(n^2)"> <br/>
 Big-Theta = <img src="https://render.githubusercontent.com/render/math?math=\Theta(n^2)"> <br/>
