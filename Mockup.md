@@ -217,7 +217,71 @@ M(n)    = M(n-1) + 1 + M(n-1)
         = 2*(2^n-1) - 1
         = 2^n - 1
 ```
+## 22.Write the pseudo code to find the convex hull from the set of N points.
+
+```java
+import java.util.Scanner;
+
+public class ConvexHull{
+    public static void main(String[]args){
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        Point[] points = new Point[n];
+        for(int i=0;i<n;i++){
+            int x = sc.nextInt();
+            int y = sc.nextInt();
+            Point p = new Point(x,y);
+            points[i] = p;
+        }
+        for(int i=0;i<n;i++){
+            for(int j=i+1;j<n;j++){
+                int left=0, right = 0;
+                Point p1 = points[i];
+                Point p2 = points[j];
+                for(int k=0;k<n;k++){
+                    if(k == i || k == j) continue;
+                    Point p3 = points[k];
+                    float a = p2.y-p1.y;
+                    float b = p1.x-p2.x;
+                    float c = p1.x*p2.y-p2.x*p1.y;
+                    if(p3.x*a+p3.y*b <= c){
+                        left++;
+                    }
+                    if(p3.x*a+p3.y*b > c){
+                        right++;
+                    }
+                }
+                if(left*right == 0){
+                    System.out.println("("+p1.x+","+p1.y+"), ("+p2.x+","+p2.y+")");
+                }
+            }
+        }
+    }
+}
+class Point{
+    int x,y;
+    Point(int x,int y){
+        this.x = x;
+        this.y = y;
+    }
+}
+/*
+8
+0 30
+15 25
+20 0
+30 60
+70 30
+55 20
+50 10
+50 40
+*/
+```
+
+
+
 ## 23.Find 3156 * 2512 by using multiplication of large number algorithms
+
 ```
 3156 * 2512 = (31*25) * 10^4 + [(31+56) * (25+12) - (31*25) - (56*12) ] * 10^2 + (56*12) 
             = (31*25) * 10^4 + [(87 * 37) - (31*25) - (56 * 12)] * 10^2 + (56*12)
