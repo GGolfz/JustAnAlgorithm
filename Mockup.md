@@ -50,7 +50,7 @@ return A
 
 The basic operation is compare the element to find minimum value <br/>
 
-f(n) = <img src="https://render.githubusercontent.com/render/math?math=\sum_{i=0}^{n-2} \sum_{j=i+1}^{n-1} 1"> <br/>
+f(n) = <img src="https://render.githubusercontent.com/render/math?math=\sum_{i=0}^{n-2} \sum_{j=i %2B 1}^{n-1} 1"> <br/>
 Big-O = <img src="https://render.githubusercontent.com/render/math?math=O(n^2)"> <br/>
 Big-Omega = <img src="https://render.githubusercontent.com/render/math?math=\Omega(n^2)"> <br/>
 Big-Theta = <img src="https://render.githubusercontent.com/render/math?math=\Theta(n^2)"> <br/>
@@ -239,6 +239,11 @@ M(n)    = M(n-1) + 1 + M(n-1)
         = 2*(2^n-1) - 1
         = 2^n - 1
 ```
+## 21.Explain why the number of points in the box with size of d*2d in the closest pair algorithm will not exceed 8.
+
+When we divide d * 2d block into 8 (d/2 * d/2) blocks we will know that each block can have only 1 point because if it have more than one point the first assumption when we create d block where d is the smallest distance from min(d1,d2) will be wrong so each block must have only 1 point inside. Then d * 2d block of convex hull will have at most 8 points.
+<img src="https://github.com/GGolfz/JustAnAlgorithm/blob/master/images/pigeon.jpeg">
+
 ## 22.Write the pseudo code to find the convex hull from the set of N points.
 
 ```java
