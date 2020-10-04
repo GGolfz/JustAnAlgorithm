@@ -1,5 +1,5 @@
 ## 1.Draw the adjacency matrix and adjacency list from the given undirected graph
-
+<img src="https://github.com/GGolfz/JustAnAlgorithm/blob/master/images/graph.png">
 V = [1,2,3,4,5,6]
 
 ### Adjacency Matrix
@@ -119,6 +119,7 @@ Since Big-O equals Big-Omega (<img src="https://render.githubusercontent.com/ren
 
 ## 10.Find Big-O of the following code.For example, The main method will call solve({3,5,3,10,2},{4,3,2,7,1},10,4)
 
+<img src="https://github.com/GGolfz/JustAnAlgorithm/blob/master/images/code.png">
 ```
 T(n)	= T(n-1)+T(n-1)+1
 			= 2T(n-1)+1
@@ -394,6 +395,7 @@ Find 87*37  = (8*3) * 10^2 + [(8+7)*(3+7) - (8*3) - (7*7)] * 10 + (7*7)
 Maximum Value = 15 (Steal 2 and 4)
 
 ## 26.Find the shortest distance of traveling to every node and go back to the starting node but you cannot travel to the same node except the start and end node from the given undirected graph. 
+<img src="https://github.com/GGolfz/JustAnAlgorithm/blob/master/images/tsp.png">
 | Directions | Distance |
 |------------|----------|
 |1 > 2 > 3 > 4 > 1|14|
