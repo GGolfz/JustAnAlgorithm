@@ -204,8 +204,8 @@ for(int i=1;i<=n;i++){
 }
 ```
 <img src="https://render.githubusercontent.com/render/math?math=f(n) = \sum_{i=1}^{n} \sum_{j=1}^{i*i} 1"> <br/>
-<img src="https://render.githubusercontent.com/render/math?math=f(n) = 1^2+2^2+3^2+...+n^2"> <br/>
-<img src="https://render.githubusercontent.com/render/math?math=f(n) = (n*(n+1)*(2n+1))/6"> <br/>
+<img src="https://render.githubusercontent.com/render/math?math=f(n) = 1^2 + 2^2 + 3^2 + ... + n^2"> <br/>
+<img src="https://render.githubusercontent.com/render/math?math=f(n) = (n*(n + 1)*(2n + 1))/6"> <br/>
 <img src="https://render.githubusercontent.com/render/math?math=f(n) = O(n^3)"> <br/>
 
 ## 18.What scenario makes the quick sort to be the worst case
