@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-class ConvexHull {
+public class Main {
     public static void main(String[] args) {
         Point pair1 = new Point(1, 2);
         Point pair2 = new Point(7, 8);
@@ -81,10 +81,6 @@ class PairOfPoints {
     public PairOfPoints(Point point1, Point point2) {
         this.point1 = point1;
         this.point2 = point2;
-    }
-
-    public static double getDistance(Point point1, Point point2) {
-        return Math.sqrt(Math.pow(point1.x - point2.x, 2) + Math.pow(point1.y - point2.y, 2));
     }
 
     public double getDistance() {
