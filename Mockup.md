@@ -120,6 +120,7 @@ Since Big-O equals Big-Omega (<img src="https://render.githubusercontent.com/ren
 ## 10.Find Big-O of the following code.For example, The main method will call solve({3,5,3,10,2},{4,3,2,7,1},10,4)
 
 <img src="https://github.com/GGolfz/JustAnAlgorithm/blob/master/images/code.png">
+
 ```
 T(n)	= T(n-1)+T(n-1)+1
 			= 2T(n-1)+1
